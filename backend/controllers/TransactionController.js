@@ -31,7 +31,20 @@ const getAllTransaction = async (req, res) => {
   }
 };
 
+const addTransaction = async (req, res) => {
+  try {
+
+    const newTransection = new transectionModel(req.body);
+    await newTransection.save();
+    res.status(201).send("Transection Created");
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+};
+
 module.exports = {
   getAllTransaction,
+  addTransaction,
 
 };
