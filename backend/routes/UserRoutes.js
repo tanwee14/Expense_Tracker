@@ -1,6 +1,6 @@
 const express = require("express");
 const { loginController, registerController ,} 
-= require("../controllers/userController");
+= require("../controllers/UserController");
 
 
 //router object
